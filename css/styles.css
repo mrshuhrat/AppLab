@@ -322,6 +322,10 @@ img {
 
 /* AWESOME-APPS SECTION STYLES */
 
+.awesome {
+  margin-bottom: 70px;
+}
+
 .awesome__container {
   display: flex;
   align-items: center;
@@ -411,6 +415,31 @@ img {
 
 .awesome__text{
   margin: 0;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+
+/* JACKPOTS SECTION STYLES */
+
+.jackpots__info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.jackpots__heading {
+  max-width: 550px;
+  font-size: 40px;
+  line-height: 50px;
+  font-weight: 500;
+  border-right: 1px solid #b9b9b8;
+  padding-right: 75px;
+}
+
+.jackpots__paragraph {
+  padding-left: 48px;
+  max-width: 450px;
   font-size: 16px;
   line-height: 26px;
 }
