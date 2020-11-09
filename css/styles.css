@@ -203,9 +203,10 @@ img {
 .intro {
   padding-top: 40px;
   padding-bottom: 20px;
+  background-color: #fdfdfe;
   background-image: url("../img/intro-bg-img.png");
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center bottom;
 
 }
 
@@ -275,9 +276,65 @@ img {
   color: #242f51;
 }
 
+
+/* BRENDS-SECTION */
+
+.brends {
+  padding-top: 115px;
+  padding-bottom: 80px;
+}
+
+.brends__text {
+  text-align: center;
+  font-size: 16px;
+  line-height: 28px;
+  margin-bottom: 30px;
+}
+
+.brends__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brends__item {
+  margin-left: 36px;
+  margin-right: 36px;
+}
+
+.brends__link {
+  display: inline-block;
+  transition: opacity 0.3s ease;
+}
+
+.brends__link:hover {
+  opacity: 0.7;
+}
+
+.brends__link:active {
+  opacity: 0.5;
+}
+
 /*------------------------------------*\
   MEDIA QUERIES 
 \*------------------------------------*/
+
+@media only screen and (max-width: 990px) {
+  .intro {
+    padding-bottom: 50px;
+  }
+
+  .intro__container {
+    flex-direction: column;
+  }
+
+  .intro__img {
+    order: -1;
+  }
+}
 
 @media only screen and (max-width: 840px) {
   .sitenav__item {
@@ -290,7 +347,7 @@ img {
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 800px) {
   .sitenav__list {
     display: none;
   }
@@ -324,10 +381,61 @@ img {
     transform: translateX(-50%);
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
   }
 
   .open-js .sitenav__item {
     margin: 12px 0;
   }
+
+  .brends__list {
+    flex-wrap: wrap;
+  }
+
+  .brends__item {
+    margin-bottom: 35px;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .intro__info {
+    text-align: center;
+  }
+
+  .intro__heading {
+    margin-top: 12px;
+    font-size: 36px;
+    line-height: 48px;
+  }
+
+  .intro__paragraph {
+    font-size: 16px;
+  }
+
+  .brends {
+    padding-top: 70px;
+    padding-bottom: 60px;
+  }
+}
+
+@media only screen and (max-width: 385px) {
+  .intro__app-text {
+    font-size: 12px;
+  }
+
+  .intro__heading {
+    font-size: 28px;
+  }
+
+  .intro__links {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .intro__button {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 16px;
+  }
+
 }
