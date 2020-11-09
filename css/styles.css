@@ -11,22 +11,34 @@
   #FONT-FACE
 \*------------------------------------*/
 
+/* poppins-regular - latin */
 @font-face {
-  font-family: "Myriad Pro";
-  font-weight: normal;
+  font-family: "Poppins";
   font-style: normal;
+  font-weight: 400;
   font-display: swap;
-  src: url("../fonts/MyriadPro-Regular.woff2") format("woff2"),
-      url("../fonts/MyriadPro-Regular.woff") format("woff");
+  src: url("../fonts/poppins-v15-latin-regular.woff2") format("woff2"),
+    url("../fonts/poppins-v15-latin-regular.woff") format("woff");
 }
 
+/* poppins-500 - latin */
 @font-face {
-  font-family: "Myriad Pro";
-  font-weight: bold;
+  font-family: "Poppins";
   font-style: normal;
+  font-weight: 500;
   font-display: swap;
-  src: url("../fonts/MyriadPro-Bold.woff2") format("woff2"),
-      url("../fonts/MyriadPro-Bold.woff") format("woff");
+  src: url("../fonts/poppins-v15-latin-500.woff2") format("woff2"),
+    url("../fonts/poppins-v15-latin-500.woff") format("woff");
+}
+
+/* poppins-700 - latin */
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/poppins-v15-latin-700.woff2") format("woff2"),
+    url("../fonts/poppins-v15-latin-700.woff") format("woff");
 }
 
 
@@ -53,10 +65,10 @@ html {
 body {
   padding: 0;
   margin: 0;
-  font-family: "Myriad Pro", "Arial", sans-serif;
+  font-family: "Poppins", "Arial", sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  color: #222;
+  color: #242f51;
 }
 
 img {
@@ -93,8 +105,15 @@ img {
   margin-right: auto;
 }
 
+
+/* SITE-HEADER STYLES */
+
+.site-header {
+  padding-top: 30px;
+  background-color: #fdfdfe;
+}
+
 .sitenav {
-  margin-top: 30px;
   display: flex;
   align-items: center;
 }
@@ -140,18 +159,28 @@ img {
   color: #2500f9;
 }
 
-.sitenav__extra-link {
-  margin-left: 40px;
+.button {
+  max-width: 170px;
+  min-width: 170px;
   padding: 16px 40px;
   text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
   color: #fff;
   background-color: #2500f9;
   border-radius: 50px;
   transition: background-color 0.3s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.sitenav__extra-link:hover {
-  background-color: #2507cc;
+.button:hover {
+  background-color: #240ab8;
+}
+
+.sitenav__extra-link {
+  margin-left: 40px;
 }
 
 .toggler-btn {
@@ -168,6 +197,87 @@ img {
   background-size: contain;
   cursor: pointer;
 }
+
+/* SITE INTRO-SECTION STYLES */
+
+.intro {
+  padding-top: 40px;
+  padding-bottom: 20px;
+  background-image: url("../img/intro-bg-img.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+
+}
+
+.intro__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.intro__info {
+  max-width: 515px;
+}
+
+.intro__app-text {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 48px;
+  background-color: #e2eaed;
+  border-radius: 20px;
+}
+
+.intro__app-text::before {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  content: "";
+  left: 0;
+  background-color: #feaa25;
+  border-radius: 50%;
+  background-image: url("../img/intro__icon.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 24px;
+}
+
+.intro__heading {
+  margin: 0;
+  margin-bottom: 24px;
+  font-size: 60px;
+  font-weight: 500;
+  line-height: 75px;
+}
+
+.intro__paragraph {
+  margin: 0;
+  margin-bottom: 40px;
+  font-style: 18px;
+  line-height: 28px;
+  color: #616368;
+}
+
+.intro__link {
+  display: inline-block;
+  margin-left: 26px;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 44px;
+  color: #2500f9;
+  transition: color 0.3s ease;
+}
+
+.intro__link:hover {
+  color: #242f51;
+}
+
+/*------------------------------------*\
+  MEDIA QUERIES 
+\*------------------------------------*/
 
 @media only screen and (max-width: 840px) {
   .sitenav__item {
