@@ -50,12 +50,7 @@ html {
   #GLOBAL-STYLES
 \*------------------------------------*/
 
-html {
-  height: 100%;
-}
-
 body {
-  height: 100%;
   padding: 0;
   margin: 0;
   font-family: "Myriad Pro", "Arial", sans-serif;
@@ -91,9 +86,138 @@ img {
 /* CONTAINER */
 
 .container {
-  max-width: 1160;
-  padding-left: 30px;
-  padding-right: 30px;
+  max-width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.sitenav {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  transition: opacity 0.2s ease;
+}
+
+.logo:hover {
+  opacity: 0.7;
+}
+
+.logo:active {
+  opacity: 0.4;
+}
+
+.logo__img {
+  display: block;
+}
+
+.sitenav__list {
+  display: flex;
+  margin: 0;
+  margin-left: auto;
+  padding: 0;
+  list-style-type: none;
+}
+
+.sitenav__item {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.sitenav__link {
+  display: inline-block;
+  text-decoration: none;
+  color: #242f51;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.sitenav__link:hover {
+  color: #2500f9;
+}
+
+.sitenav__extra-link {
+  margin-left: 40px;
+  padding: 16px 40px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #2500f9;
+  border-radius: 50px;
+  transition: background-color 0.3s ease;
+}
+
+.sitenav__extra-link:hover {
+  background-color: #2507cc;
+}
+
+.toggler-btn {
+  display: none;
+  margin-left: auto;
+  width: 32px;
+  height: 32px;
+  outline: none;
+  border: none;
+  background: none;
+  background-image: url("../img/menu.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 840px) {
+  .sitenav__item {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+
+  .sitenav__extra-link {
+    margin-left: 32px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .sitenav__list {
+    display: none;
+  }
+
+  .sitenav__extra-link {
+    display: none;
+  }
+
+  .toggler-btn {
+    display: block;
+  }
+
+  .toggler__close {
+    background-image: url("../img/close.png");
+  }
+
+  .open-js {
+    position: relative;
+    z-index: 1;
+  }
+
+  .open-js .sitenav__list{
+    padding: 10px 0;
+    display: block;
+    width: 90%;
+    position: absolute;
+    z-index: 1;
+    top: 150%;
+    left: 50%;
+    text-align: center;
+    transform: translateX(-50%);
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.8);
+  }
+
+  .open-js .sitenav__item {
+    margin: 12px 0;
+  }
 }
