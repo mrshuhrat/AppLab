@@ -514,6 +514,37 @@ img {
 
 /* DESIGN SECTION STYLES */
 
+.design {
+  margin-bottom: 135px;
+  padding-bottom: 72px;
+  border-bottom: 2px solid #f4f4f4;
+}
+
+.design__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.design__info {
+  max-width: 410px;
+}
+
+.design__heading {
+  margin: 0;
+  margin-bottom: 30px;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 46px;
+}
+
+.design__paragraph {
+  margin: 0;
+  margin-bottom: 45px;
+  font-size: 16px;
+  line-height: 26px;
+}
+
 /*------------------------------------*\
   MEDIA QUERIES 
 \*------------------------------------*/
@@ -531,6 +562,14 @@ img {
   .jacpots__item {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .design__container {
+    flex-direction: column;
+  }
+  
+  .design__img {
+    margin-bottom: 40px;
   }
 }
 
@@ -725,7 +764,25 @@ img {
     transform: translateX(-50%);
   }
 
+  .jackpots {
+    margin-bottom: 50px;
+  }
+
   .jackpots__heading {
     font-size: 24px;
+  }
+
+  .design__info {
+    text-align: center;
+  }
+
+  .design__heading {
+    font-size: 26px;
+    line-height: 34px;
+    margin-bottom: 20px;
+  }
+
+  .design__paragraph {
+    font-size: 14px;
   }
 }
