@@ -421,11 +421,15 @@ img {
 
 
 /* JACKPOTS SECTION STYLES */
+.jackpots {
+  margin-bottom: 90px;
+}
 
 .jackpots__info {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 110px;
 }
 
 .jackpots__heading {
@@ -444,6 +448,72 @@ img {
   line-height: 26px;
 }
 
+.jackpots__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.jacpots__item {
+  max-width: 260px;
+  margin-left: 9px;
+  margin-right: 9px;
+  margin-bottom: 25px;
+}
+
+.jacpots__item::before {
+  display: block;
+  width: 88px;
+  height: 88px;
+  content: "";
+  margin-bottom: 32px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+.payouts::before {
+  background-image: url("../img/payouts.png");
+}
+
+.network::before {
+  background-image: url("../img/network.png");
+}
+
+.reward::before {
+  background-image: url("../img/rewards.png");
+}
+
+.payouts .jackpots__name {
+  color: #f55767;
+}
+
+.network .jackpots__name {
+  color: #2563ff;
+}
+
+.reward .jackpots__name {
+  color: #40975f;
+}
+
+.jackpots__name {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 58px;
+}
+
+.jackpots__text {
+  margin: 0;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+/* DESIGN SECTION STYLES */
+
 /*------------------------------------*\
   MEDIA QUERIES 
 \*------------------------------------*/
@@ -454,6 +524,11 @@ img {
   }
 
   .awesome__info {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .jacpots__item {
     margin-left: auto;
     margin-right: auto;
   }
@@ -470,6 +545,30 @@ img {
 
   .intro__img {
     order: -1;
+  }
+
+  .jackpots__info {
+    margin-bottom: 80px;
+  }
+
+  .jackpots__heading {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .jackpots__paragraph {
+    padding-left: 42px;
+    max-width: 450px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .jacpots__item {
+    margin-bottom: 45px;
+  }
+
+  .jacpots__item::before {
+    margin-bottom: 1px;
   }
 }
 
@@ -529,6 +628,38 @@ img {
     flex-wrap: wrap;
   }
 
+  .jackpots__heading {
+    font-size: 24px;
+    line-height: 40px;
+    max-width: 510px;
+  }
+
+  .jackpots__paragraph {
+    padding-left: 42px;
+    max-width: 410px;
+    font-size: 12px;
+    line-height: 22px;
+  }
+}
+
+@media only screen and (max-width: 690px) {
+  .jackpots__info {
+    flex-wrap: wrap;
+    max-width: 410px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+  }
+
+  .jackpots__heading {
+    padding-right: 0;
+    border: none;
+    font-size: 28px;
+  }
+
+  .jackpots__paragraph {
+    padding-left: 0;
+  }
 }
 
 @media only screen and (max-width: 560px) {
@@ -594,4 +725,7 @@ img {
     transform: translateX(-50%);
   }
 
+  .jackpots__heading {
+    font-size: 24px;
+  }
 }
