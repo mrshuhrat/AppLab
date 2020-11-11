@@ -545,6 +545,103 @@ img {
   line-height: 26px;
 }
 
+
+/* OUR-APP SECTION */
+
+.our-app__info {
+  max-width: 635px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 45px;
+  text-align: center;
+}
+
+.our-app__heading {
+  margin: 0;
+  margin-bottom: 35px;
+  max-width: 435px;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 46px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.our-app__paragraph {
+  margin: 0;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.our-app__list {
+  margin: 0;
+  margin-left: -25px;
+  margin-right: -25px;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.our-app__item {
+  max-width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-bottom: 50px;
+}
+
+.our-app__item::before {
+  display: block;
+  width: 88px;
+  height: 88px;
+  content: "";
+  margin-bottom: 15px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.app-development::before {
+  background-image: url("../img/app-development.png");
+}
+
+.times-award::before {
+  background-image: url("../img/times-award.png");
+}
+
+.cloud-strage::before {
+  background-image: url("../img/cloud-stroage.png");
+}
+
+.customization::before {
+  background-image: url(../img/customization.png);
+}
+
+.planning::before {
+  background-image: url("../img/ux-planning.png");
+}
+
+.customer-support::before {
+  background-image: url("../img/customer-support.png");
+}
+
+.our-app__name {
+  margin: 0;
+  font-size: 20px;
+  line-height: 58px;
+}
+
+.our-app__text {
+  margin: 0;
+  font-size: 16px;
+  line-height: 26px;
+}
+
 /*------------------------------------*\
   MEDIA QUERIES 
 \*------------------------------------*/
@@ -609,6 +706,12 @@ img {
   .jacpots__item::before {
     margin-bottom: 1px;
   }
+
+  .our-app__item {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 45px;
+  }
 }
 
 @media only screen and (max-width: 840px) {
@@ -619,6 +722,16 @@ img {
 
   .sitenav__extra-link {
     margin-left: 32px;
+  }
+
+  .our-app__list {
+    justify-content: space-around;
+  }
+
+  .our-app__item {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 45px;
   }
 }
 
@@ -725,6 +838,16 @@ img {
     position: relative;
     z-index: 1;
     min-width: 370px;
+  }
+
+  .our-app__heading {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .our-app__paragraph {
+    font-size: 14px;
+    line-height: 24px;
   }
 }
 
