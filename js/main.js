@@ -1,6 +1,5 @@
 var elSiteHeader = document.querySelector('.sitenav');
 var elSiteHeaderToggler = document.querySelector('.toggler-btn');
-
 elSiteHeaderToggler.classList.add('toggler');
 
 elSiteHeaderToggler.addEventListener('click', function () {
