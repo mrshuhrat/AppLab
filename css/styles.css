@@ -176,7 +176,7 @@ img {
 }
 
 .button:hover {
-  background-color: #240ab8;
+  background-color: #3d3279;
 }
 
 .sitenav__extra-link {
@@ -548,6 +548,10 @@ img {
 
 /* OUR-APP SECTION */
 
+.our-app {
+  margin-bottom: 100px;
+}
+
 .our-app__info {
   max-width: 635px;
   margin-left: auto;
@@ -642,6 +646,68 @@ img {
   line-height: 26px;
 }
 
+
+/* ULTIMATE SECTION */
+
+.ultimate {
+  margin-bottom: 170px;
+  background-image: url("../img/ultimate-bg-img.png");
+  background-repeat: no-repeat;
+  background-position: center right calc(50% - 400px);
+}
+
+.ultimate__info {
+  max-width: 630px;
+}
+
+.ultimate__heading {
+  max-width: 315px;
+  margin: 0;
+  margin-bottom: 25px;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 46px;
+}
+
+.ultimate__paragraph {
+  max-width: 395px;
+  margin: 0;
+  margin-bottom: 60px;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.ultimate__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  margin-left: -50px;
+  margin-right: -50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.ultimate__item {
+  max-width: 260px;
+  text-align: left;
+  align-items: start;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 60px;
+}
+
+.ultimate__item::before {
+  display: block;
+  width: 88px;
+  height: 88px;
+  content: "";
+  margin-bottom: 15px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 /*------------------------------------*\
   MEDIA QUERIES 
 \*------------------------------------*/
@@ -711,6 +777,18 @@ img {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 45px;
+  }
+
+  .ultimate {
+    background-image: none;
+  }
+
+  .ultimate__info {
+    max-width: 100%;
+  }
+
+  .ultimate__list {
+    justify-content: space-around;
   }
 }
 
@@ -791,6 +869,18 @@ img {
     max-width: 410px;
     font-size: 12px;
     line-height: 22px;
+  }
+
+  .ultimate__list {
+    margin-left: -30px;
+    margin-right: -30px;
+  }
+
+  .ultimate__item {
+    max-width: 260px;
+    text-align: left;
+    margin-left: 30px;
+    margin-right: 30px;
   }
 }
 
